@@ -5,7 +5,7 @@ class EventsController < ApplicationController
   include CMS::ActionController::Contents
   
   before_filter :authentication_required, :except => [:index,:show, :search, :search_events, :advanced_search_events, :search_by_title,:search_by_tag, :search_in_description, :search_by_date, :advanced_search,:title, :description, :dates, :clean]
-  
+  #probando git anda que no mola
   
   # A Container is needed when posting new events
   # (see CMS::ActionController::Base#needs_container)
