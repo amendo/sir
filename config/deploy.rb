@@ -1,10 +1,13 @@
 set :application, "sir2.0"
-set :repository,  "http://seta.dit.upm.es/svn/ging/sir2.0/trunk"
+set :repository,  "git://github.com/volomir/sir.git"
+set :scm, "git"
+set :git_enable_submodules, 1
+
 
 # If you aren't deploying to /u/apps/#{application} on the target
 # servers (which is the default), you can specify the actual location
 # via the :deploy_to variable:
-set :deploy_to, "/var/www/html/sir.dit.upm.es/sir"
+set :deploy_to, "/home/isabel/sir2.0"
 set :deploy_via, :export
 
 # If you aren't using Subversion to manage your source code, specify
@@ -33,6 +36,6 @@ namespace(:deploy) do
 end
 
 
-role :app, "root@sir.dit.upm.es"
-role :web, "root@sir.dit.upm.es"
-role :db,  "root@sir.dit.upm.es", :primary => true
+role :app, "root@flexsir.dit.upm.es"
+role :web, "root@flexsir.dit.upm.es"
+role :db,  "root@flexsir.dit.upm.es", :primary => true
